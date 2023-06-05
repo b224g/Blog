@@ -1,0 +1,8 @@
+.heading{
+    flex: 0 1 100%;
+    color: #ffff;
+    background-color: #006b09;
+    border-bottom: solid #07b148;
+    font-family: Andale Mono, monospace;
+    padding: 10px 20px 0;
+}

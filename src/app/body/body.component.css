@@ -1,0 +1,151 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.title{
+    padding: 15px 15px 0;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: Andale Mono, monospace;
+    width: 100%;
+}
+#article{
+    overflow: auto;
+    padding: 20px;
+}
+.under_header{
+    background-color: #07b148;
+   
+    margin: 0 15px 5px;
+    height: 2px;
+    border: 0;
+}
+section{
+    margin-top: auto;
+}
+ul{
+   max-height:50px;
+   overflow-y:auto; 
+}
+main{
+    margin: 20px;
+    flex: 1 0 70%;
+    border: dashed 0.1rem #006b09;
+    border-left-color:  #07b148;
+    border-right-color:  #07b148;
+    border-radius: 15px;
+    box-shadow: 0.5em 1em 0.5em 0em rgba(64, 73,59, 0.281);
+    
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    margin: 10px 10px 30px;
+    color: white;
+    height: 30px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    padding: 0 10px;   
+}
+.create_button{
+    margin: 10px 10px 30px;
+    color: white;
+    height: 30px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    padding: 0 10px;
+}
+.archive_button{
+    background-color: #A3AE9E;
+    margin-right: 20px;
+    float: right; 
+}
+.archive_button:hover{
+    background-color: rgb(54, 54, 54);
+}
+.delete_button{
+    background-color: #cf3a15;
+    float: right; 
+}
+.delete_button:hover{
+    background-color: #76210c;
+}
+.create_button{
+    background-color:  #006b09;
+    width: 100px;
+    float: left;
+    margin: 10px 20px 0;
+}
+.create_button:hover{
+    background-color:  #07b148;
+}
+
+aside{
+    margin: 20px 30px;
+    flex: 1 0 20%;
+    border: dashed 0.1rem #006b09;
+    border-left-color:  #07b148;
+    border-right-color:  #07b148;
+    border-radius: 15px;
+    box-shadow: 0.5em 1em 0.5em 0em rgba(64, 73,59, 0.281);
+
+    display: flex;
+    flex-direction: column;
+
+}
+label, input{
+    width: 90%;
+}
+label{
+    margin: 10px 0;
+    font: 18px Andale Mono, monospace;
+}
+input{
+    border: none;
+    border-bottom: 2px solid #40493B;
+    font: 12px/1.5 Helvetica, sans-serif;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+#input-author:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}   
+
+#input-title{
+    border: 3px solid #40493B;
+    border-radius: 0.2rem;
+    
+}
+
+.area{
+    border: 2px solid #40493B;
+    font: 12px/1 Andale Mono, monospace;
+}
+
+h1{
+    font-size: 24px;
+    margin: 0 15px -2px;
+}
+p{
+    margin: 5px 15px;
+    font: 14px/1.5 Helvetica, sans-serif;
+}
+footer{
+    flex: 0 1 100%;
+    margin-top: 30px;
+}
+.footer{
+    margin: 5px 20px 0;
+}
+.foot{
+    background-color: #000000;
+    margin: 0 15px;
+    height: 2px;
+    border: 0;
+}

@@ -1,0 +1,96 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+</head> 
+<body>
+    <main>
+        <header class="title"> Записи</header>
+        <hr class="under_header">
+        <div id="article"  *ngIf="blogPrevew$ | async as m_blog"  >
+            <div >
+                <h2>{{m_blog.content_title | uppercase}}</h2>
+                <p>Категория:  <b>{{m_blog.newCategory | titlecase}}</b></p>
+                <p>Автор:  <b>{{ m_blog.author | titlecase }}</b></p>
+                <p>{{m_blog.description| lowercase}}</p>
+            </div>
+            <div>
+                <button class="delete_button" (click)="removeItems">Удалить</button> 
+                <button class="archive_button" type="submit" (ngSubmit)="archive()">Архив</button>
+            </div>
+            
+        </div>
+    </main>
+     
+    <aside>
+        <header class="title">Создать Запись</header>
+        <hr class="under_header">
+        <div class="card-body"> 
+            <form  novalidate (ngSubmit)="saveData()" [formGroup]="registerForm" >
+                <div class="form-input">
+                    <label>Автор</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="author"
+                        formControlName="author"    
+                    >
+
+                </div>
+                <div class="form-input">
+                    <label>Заголовок</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="content_title"
+                        formControlName="content_title"
+                    
+                    >
+                    
+                </div>
+                <div class="form-row">
+                    <label>Категория</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="newCategory" 
+                        formControlName = "newCategory"
+                    >
+                    
+                </div>
+                <div class="form-input">
+                    <label>Содержание</label>
+                    <textarea class="form-control" 
+                        placeholder="description" type="text"  cols="37" rows="12" 
+                        formControlName="description">
+                        
+                    </textarea>
+                   
+                </div>
+                <div>
+                    <button  class="create_button" type="submit"
+                    [disabled]="!registerForm.valid">Создать</button>
+                </div>
+            </form>
+
+        </div>
+               
+        <section class="archive" *ngIf="blogPrevew$ | async as m_blog">
+            <header class="title">Архив</header>
+            <div>
+                <hr class="sous_tete">
+                <ul type='square' >
+                    <li>{{ m_blog.author | uppercase }}</li>
+                </ul>
+                <h6>{{m_blog.content_title | uppercase}}</h6>
+            </div>
+            
+        </section>
+
+       
+    </aside>
+
+    <footer>
+        <hr class="foot">
+        <p class="footer">Курсовая работа по angular </p>
+    </footer>
+</body>
