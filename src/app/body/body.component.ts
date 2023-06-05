@@ -1,6 +1,6 @@
 import { Component,Input,OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormArray } from '@angular/forms';
-import { M_Blog } from './Models/M_Blog';
+import { M_Blog } from '../Models/M_Blog';
 import { Observable, map } from 'rxjs';
 
 @Component({
